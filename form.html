@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NYPD Cyber - Form</title>
+		<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+		<link rel="stylesheet" href="css/themes/nypdcyber.css" />		
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/nypd.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147655668-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-147655668-1');
+</script>
+	</head>
+	<body>
+	
+<div style="padding:20px">
+
+    <div id="nypdform">
+		<p align="center"><a href="index.html"><img src="images/NCIS_logo.png" style="width:300px;" /></a></p>
+
+	
+	<p>Please select the appropriate elements using the dropdown menus below, then click Submit. The questions to ask the C/V will then appear.</p>
+
+    	<form name="formInput" method="post" data-ajax="false">
+
+            <h3>What is the category of the crime?</h3>
+            <select name="category" id="category">
+		<option value="none">Please select an answer</option>
+		<option value="scamwebpage">Scam Webpage or Financial Transaction</option>
+		<option value="callfraudle">Call Fraud (Government)</option>
+		<option value="callfraud">Call Fraud</option>
+		<option value="fraudemail">Fraud E-mail / Impersonation</option>
+		<option value="onlineextortion">Online Extortion</option>
+		<option value="physicalthreat">Physical Threat Extortion</option>
+		<option value="accounttakeover">Account Takeover</option>
+		<option value="malewareredirect">Malware / Redirect Scam / SEO</option>
+		<option value="simswap">SIM-Swap</option>
+		<option value="allother">All other</option>
+            </select>
+
+            <h3>How was the victim contacted?</h3>
+            <select name="contactmethod" id="contactmethod">
+		<option value="none">Please select an answer</option>
+		<option value="mobilevoice">Mobile Phone - Voice Call</option>
+		<option value="mobiletext">Mobile Phone - SMS / Text Message</option>
+		<option value="mobileredirect">Mobile Phone - Voice / Internet: Redirect Scam</option>
+		<option value="simswap">SIM-Swap (Mobile Phone Account Takeover)</option>
+		<option value="landline">Landline - Voice Call</option>
+		<option value="webpage">Computer - Scam Webpage</option>
+		<option value="email">Email</option>
+		<option value="social">Social Media Site</option>	
+            </select>
+
+            <h3>How did the victim pay?</h3>
+            <select name="paymentmethod" id="paymentmethod">
+		<option value="none">Please select an answer</option>
+		<option value="giftcard">Cash / Gift or Stored Value Card</option>
+		<option value="credit">Credit Card</option>
+		<option value="onlineservice">Online Service (PayPal, Venmo, etc.)</option>
+		<option value="banktransfer">Bank Transfer</option>
+		<option value="cryptocurrency">Cryptocurrency (Bitcoin, Ethereum, Monero, etc.)</option>
+		<option value="cash">Cash</option>
+		<option value="check">Check</option>
+		<option value="na">Not Applicable</option>
+            </select>
+
+            <h3>What contact method did the victim use to pay?</h3>
+            <select name="paymentcontactmethod" id="paymentcontactmethod">
+ 		<option value="none">Please select an answer</option>
+		<option value="mobilevoice">Mobile Phone - Voice Call</option>
+		<option value="mobiletext">Mobile Phone - SMS / Text Message</option>
+		<option value="mobileapp">Mobile Phone - Telegram / WhatsApp / Other Chat App</option>
+		<option value="email">Email</option>
+		<option value="website">Website</option>
+		<option value="atm">ATM/Crypto Wallet Transfer</option>
+		<option value="package">US Mail or express service (FedEx, UPS, etc.)</option>
+		<option value="na">Not Applicable</option>		
+            </select>
+
+	<p align="center"><a onclick="nypdprocess();" class="ui-btn-c ui-btn ui-btn-inline">Submit</a></p>
+
+        </form>
+
+		<p align="center">Copyright &copy; 2019-2021 Nick Selby &amp; Raven Zachary<br />All Rights Reserved<br />FOR LAW ENFORCEMENT USE ONLY<br/>LAW ENFORCEMENT SENSITIVE || U/FOUO<br /></p>
+
+	</div>
+
+</div>
+
+    <!-- Start of results page -->
+    <div id="nypdresults" style="padding:20px">
+  <!-- <div data-role="page" data-theme="d" data-add-back-btn="true" data-back-btn-text = "Home" id="report"> -->
+
+    <!-- This is where the conditional results will be displayed based on the form input -->
+	<div class="category-info"></div>
+	<div class="contactmethod-info"></div>
+	<div class="paymentmethod-info"></div>
+	<div class="paymentcontactmethod-info"></div>	
+	<div class="reloadform"></div>	
+	<div class="done"></div>	
+
+    </div>
+
+</body>
+
+</html>
