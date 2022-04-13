@@ -1,6 +1,6 @@
 #CyberQ
 #LICENSE
-#Copyright (C) 2019, 2020, 2021  NICK SELBY AND RAVEN ZACHARY ALL RIGHTS RESERVED
+#Copyright (C) 2019-2022  NICK SELBY AND RAVEN ZACHARY ALL RIGHTS RESERVED
 #
 #This program is free, no cost software provided TO LAW ENFORCEMENT AGENCIES and 
 #those working on behalf of LAW ENFORCEMENT AGENCIES. It is not permitted for any 
